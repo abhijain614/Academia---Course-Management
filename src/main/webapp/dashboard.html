@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Management Application</title>
+    <link rel="stylesheet"
+          href="assets/css/bootstrap.min.css">
+<!--    href="assets/css/bootstrap-table.min.css">-->
+
+
+    <style>
+        button {
+            font-size: 1.1em;
+            background-color: #EBF5FF;
+            color: #4312AE;
+            border: 2px solid black;
+            box-shadow: 4px 4px 4px #999999;
+        }
+        button:hover, button:focus, button:active {
+            /* swap colors */
+            color: #EBF5FF;
+            background-color: #4312AE;
+            cursor: pointer; /* displays a hand */
+        }
+
+    </style>
+
+</head>
+<body>
+
+<style>
+    .selected {
+        background-color: brown;
+        color: #FFF;
+    }
+</style>
+
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark"
+         style="background-color: #ff6347">
+    </nav>
+</header>
+<br>
+
+<div class="row">
+    <!-- <div class="alert alert-success" *ngIf='message'>{{message}}</div> -->
+
+    <div class="container">
+        <h3 class="text-center">Course List</h3>
+        <hr>
+        <br>
+
+        <table class="table table-secondary table-bordered" id="tableSelect">
+            <thead>
+            <tr>
+<!--                <th scope="col">Action</th>-->
+
+                <th scope="col" class="table-dark course_id">CourseID</th>
+                <th scope="col" class="table-dark name">Name</th>
+                <th scope="col" class="table-dark course_code">CourseCode</th>
+                <th scope="col" class="table-dark description">Description</th>
+                <th scope="col" class="table-dark year">Year</th>
+                <th scope="col" class="table-dark term">Term</th>
+                <th scope="col" class="table-dark credits"> Credits</th>
+                <th scope="col" class="table-dark capacity">Capacity</th>
+                <th scope="col" class="table-dark faculty">Faculty</th>
+                <th scope="col" class="table-dark count" style="color:red" data-toggle="modal" data-target="#myModal" >Student count</th>
+            </tr>
+            </thead>
+            <tbody id="tableBody"  ></tbody>
+        </table>
+        <br>
+        <br>
+        <button type="button" id="update_btn" class="btn btn-primary" onclick=update()>Update</button>
+        <button type="button" id="delete_btn" class="btn btn-danger"  onclick=delete_course()>Delete</button>
+
+        </div>
+</div>
+
+
+<div class="container">
+    <!-- <h2>Modal Example</h2>
+     &lt;!&ndash; Trigger the modal with a button &ndash;&gt;
+     <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <p>Confirm your Sorting order</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="sortTable('true','count','tableSelect') ">Ascending</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="sortTable('false','count','tableSelect') ">Descending</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" >Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/courseList.js"></script>
+<!--<script src="assets/js/w3.js"></script>-->
+<!--<script src="assets/js/bootstrap-table.min.js"></script>-->
+<!--<script>-->
+<!--    function priceSorter(a, b) {-->
+<!--        var aa = a.replace('$', '')-->
+<!--        var bb = b.replace('$', '')-->
+<!--        return aa - bb-->
+<!--    }-->
+<!--</script>-->
+</html>
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Courses List</title>-->
+<!--    <link href="assets/css/bootstrap.min.css" rel="stylesheet">-->
+<!--    <link href="assets/css/form-validation.css" rel="stylesheet">-->
+<!--</head>-->
+
+<!--<body >-->
+<!--<div class="container my-4">-->
+<!--    <p class="text-center"><strong>List of Courses </strong> </p>-->
+
+<!--    <table class="table table-hover table table-bordered">-->
+<!--        &lt;!&ndash; <div class="custom-control custom-radio">-->
+<!--             <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">-->
+<!--             <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>-->
+<!--         </div>&ndash;&gt;-->
+<!--        <thead>-->
+<!--        <tr>-->
+<!--            <th scope="col">Action</th>-->
+<!--            <th scope="col">Id</th>-->
+<!--            <th scope="col"> Name</th>-->
+<!--            <th scope="col">Course Code</th>-->
+<!--            <th scope="col">Description</th>-->
+<!--        </tr>-->
+<!--        </thead>-->
+
+
+<!--        <tbody id="testBody"></tbody>-->
+
+<!--    </table>-->
+<!--</div>-->
+<!--</body>-->
+
+
+
+<!--<script src="assets/js/jquery.min.js"></script>-->
+<!--<script src="assets/js/bootstrap.min.js"></script>-->
+<!--<script src="assets/js/courseList.js"></script>-->
+<!--</html>-->

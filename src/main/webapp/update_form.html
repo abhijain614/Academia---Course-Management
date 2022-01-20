@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students - Courses</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/form-validation.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container">
+    <div class="py-5 text-center">
+        <img alt="" class="d-block mx-auto mb-4" height="100" src="assets/svg/IIIT_Bangalore_Logo.png" width="120">
+        <h2>Academic ERP</h2>
+    </div>
+
+    <div class="col-md-8 order-md-1">
+        <h4 class="mb-3">Course Details</h4>
+        <form class="needs-validation-courses" id="course-validation"  novalidate>
+            <div class="mb-3">
+                <label for="course_id">Course ID</label>
+                <input class="form-control" id="course_id" placeholder="" required type="" value="" readonly>
+                <div class="invalid-feedback">
+                    Valid course id is required.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="capacity">Capacity</label>
+                <input class="form-control" id="capacity" placeholder="" required type="number">
+                <div class="invalid-feedback">
+                    Please enter a valid capacity of the course.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="course_code">course code</label>
+                <input class="form-control" id="course_code" placeholder="" required type="" value="">
+                <div class="invalid-feedback">
+                    Valid course code of the course is required.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="credits">Credits</label>
+                <input class="form-control" id="credits" placeholder="" required type="number" value="4">
+                <div class="invalid-feedback">
+                    Valid credits of the course is required.
+                </div>
+            </div>
+
+
+            <div class="mb-3">
+                <label for="description">Description</label>
+                <input class="form-control" id="description" placeholder="" required type="text" value="">
+                <div class="invalid-feedback">
+                    Valid description of the course is required.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="faculty">Faculty</label>
+                <input class="form-control" id="faculty" placeholder="" required type="text" value="">
+                <div class="invalid-feedback">
+                    Valid faculty of the course is required.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="name">Name</label>
+                <input class="form-control" id="name" placeholder="" required type="text" value="">
+                <div class="invalid-feedback">
+                    Valid name of the course is required.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="term">Term</label>
+                <input class="form-control" id="term" placeholder="" required type="number" value="">
+                <div class="invalid-feedback">
+                    Valid term of the course is required.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="year">Year</label>
+                <input class="form-control" id="year" placeholder="" required type="number" value="">
+                <div class="invalid-feedback">
+                    Valid year of the course is required.
+                </div>
+            </div>
+
+            <hr class="mb-4">
+            <button class="btn btn-primary btn-lg btn-block" type="submit" id="update_btn" onclick=update_data() >Continue to update</button>
+            <div class="alert alert-warning" role="alert" id="course-alert" style="display: none; margin-top: 20px">
+                Some error occurred!!
+            </div>
+            <div class="alert alert-success" role="alert" id="course-success" style="display: none; margin-top: 20px">
+                Details saved successfully!!
+            </div>
+        </form>
+    </div>
+</div>
+<footer class="my-5 pt-5 text-muted text-center text-small">
+</footer>
+</body>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/update_form.js"></script>
+</html>
